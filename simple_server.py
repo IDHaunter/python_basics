@@ -25,12 +25,13 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         elif path == '/greet':
             # Getting the user parameter from a request
             user = params.get('user', 'Guest')
-
+            #Тренировка моделей
             # Send a personalized greeting
             greeting = f'Hello, {user}!'
             self.wfile.write(greeting.encode('utf-8'))
         elif path == '/about':
             # Sending a byte string "About Us"
+            # Состояние тренировки моделей
             self.wfile.write(b'About Us')
         else:
             # If the path is not recognized, send 404
